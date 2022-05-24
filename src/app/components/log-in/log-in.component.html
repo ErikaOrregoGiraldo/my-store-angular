@@ -1,15 +1,19 @@
-<form (onLogIn)="onLogIn()" #myFormLogIn="ngForm">
-  <div class="input-group">
-    <label for="">Email</label>
-    <input required type="text" id="name" [(ngModel)]="logIn.email" name="email">
-    <p>Mensajes de error</p>
-  </div>
+<h2>Ingresa los datos para iniciar sesión</h2>
+<div class="containerFormLogIn">
+  <form (onLogIn)="onLogIn()" #myFormLogIn="ngForm" class="formLogIn">
+    <div class="input-group">
+      <label for="">Email</label>
+      <input required type="text" id="name" [(ngModel)]="logIn.email" name="email">
+      <p>Mensajes de error</p>
+    </div>
 
-  <div class="input-group">
-    <label for="">Password</label>
-    <input required type="text" id="name" [(ngModel)]="logIn.password" name="password">
-    <p>Mensajes de error</p>
-  </div>
+    <div class="input-group">
+      <label for="">Password</label>
+      <input required type="text" id="name" [(ngModel)]="logIn.password" name="password">
+      <p>Mensajes de error</p>
+    </div>
 
-  <button [disabled]=" myFormLogIn.invalid" type="submit">Log In</button>
-</form>
+    <button [disabled]=" myFormLogIn.invalid" type="submit">Log In</button>
+  </form>
+
+</div>

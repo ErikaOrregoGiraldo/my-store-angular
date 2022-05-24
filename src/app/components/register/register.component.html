@@ -1,19 +1,23 @@
-<form (ngSubmit)="onRegister()" #myForm="ngForm">
-  <div class="input-group">
-    <label for="">Nombre</label>
-    <input required type="text" id="name" [(ngModel)]="register.name" name="name">
-    <p>Mensajes de error</p>
-  </div>
-  <div class="input-group">
-    <label for="">Email</label>
-    <input required type="email" id="email" [(ngModel)]="register.email" name="email">
-    <p>Mensajes de error</p>
-  </div>
-  <div class="input-group">
-    <label for="">Password</label>
-    <input required type="password" id="password" [(ngModel)]="register.password" name="password">
-    <p>Mensajes de error</p>
-  </div>
-  <button [disabled]="myForm.invalid" type="submit">Registrar</button>
-  <button type="button">Accion</button>
-</form>
+<h2>BIENVENIDO, COMPLETA EL FORMULARIO DE REGISTRO</h2>
+<div class="containerFormRegister">
+  <form (ngSubmit)="onRegister()" #myForm="ngForm" class="formRegister">
+    <div class="input-group">
+      <label for="">Nombre</label>
+      <input required type="text" id="name" [(ngModel)]="register.name" name="name">
+      <p>Mensajes de error</p>
+    </div>
+    <div class="input-group">
+      <label for="">Email</label>
+      <input required type="email" id="email" [(ngModel)]="register.email" name="email">
+      <p>Mensajes de error</p>
+    </div>
+    <div class="input-group">
+      <label for="">Password</label>
+      <input required type="password" id="password" [(ngModel)]="register.password" name="password">
+      <p>Mensajes de error</p>
+    </div>
+    <button [disabled]="myForm.invalid" type="submit">Registrar</button>
+    <button type="button">Accion</button>
+    <button mat-stroked-button>Basic</button>
+  </form>
+</div>
